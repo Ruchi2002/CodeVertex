@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MyBlog - Your space to share ideas and stories with the world.">
+    <title>MyBlog - Write, Share, Inspire!</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Arial&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="./api.js" defer></script>
+    <script type="module" src="./script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">MyBlog</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cta">
+            <a href="#signin">Sign In</a>
+            <a href="#signup" class="btn">Create Account</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="headline">Write, Share, Inspire!</h1>
+                <p class="tagline">Your space to share ideas and stories with the world.</p>
+                <div class="cta">
+                    <button class="btn" id="start-writing-btn">Start Writing Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">Our Amazing Features</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fa fa-pencil-alt" aria-hidden="true"></i>
+                        <h3 class="feature-title">Write Posts</h3>
+                        <p class="feature-description">Create and publish your thoughts effortlessly with our easy-to-use editor.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                        <h3 class="feature-title">Comment</h3>
+                        <p class="feature-description">Engage with others by leaving comments and starting conversations.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-edit" aria-hidden="true"></i>
+                        <h3 class="feature-title">Edit/Delete Posts</h3>
+                        <p class="feature-description">Update or remove posts with ease, ensuring your content is always up-to-date.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-posts" id="recent-posts">
+            <div class="container">
+                <h2 class="section-title">Recent Posts</h2>
+                <div class="posts-grid">
+                    <!-- Post articles here -->
+                    <!-- Example of a post article structure: -->
+                    <article class="post">
+                        <img src="https://via.placeholder.com/500x300" alt="Post Image" class="post-image" loading="lazy">
+                        <div class="post-content">
+                            <h3 class="post-title">Post Title</h3>
+                            <p class="post-excerpt">Brief excerpt from the post...</p>
+                            <a href="#" class="read-more btn">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Repeat for other posts -->
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Welcome to our blog platform, where creativity meets expression! Our platform is designed to give you a space to share your thoughts, ideas, and stories with a vibrant community.</p>
+                        <p>Our mission is to empower individuals to voice their unique perspectives and connect with like-minded readers. Join us and be part of a dynamic platform that celebrates creativity and personal growth.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxvZ3xlbnwwfHwwfHx8MA%3D%3D" alt="About Us" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-media">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024 MyBlog. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="blog-post-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="close-btn" id="close-btn" aria-label="Close modal">&times;</button>
+            <form id="post-form">
+                <h2>Add a New Blog Post</h2>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" rows="5" required></textarea>
+                <label for="image-url">Image URL:</label>
+            <input type="text" id="image-url" name="image-url" placeholder="Enter image URL" required>
+            
+                <button type="submit">Post</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
