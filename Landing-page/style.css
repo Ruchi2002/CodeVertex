@@ -1,0 +1,12 @@
+.toggle__hamburger{
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle__hamburger.active{
+    transform: translateX(0);
+}
+
+html {
+    scroll-behavior: smooth;
+}

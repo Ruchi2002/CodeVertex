@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link CSS -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- link Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Uifry</title>
+  </head>
+
+  <body class="max-w-[1190px] m-auto p-5 ">
+    <header class="header flex justify-between items-center pt-10 px-4 md:px-10">
+        <div class="header__container flex gap-4 md:gap-10 items-center w-full">
+          <div class="header__logo">
+            <img src="./assets/Logo.png" alt="logo" class="header__logo-img" />
+          </div>
+          <nav class="header__nav hidden md:block">
+            <ul class="header__nav-list flex gap-4 md:gap-6 text-lg font-bold">
+                <li class="header__nav-item header__nav-item--active text-red-600">
+                    <a href="#home">Home</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a href="#about-us">About Us</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a href="#pricing">Pricing</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a href="#features">Features</a>
+                  </li>
+            </ul>
+          </nav>
+         
+        </div>
+        <button
+          type="button"
+          class="header__button rounded-md bg-black px-4 py-2 md:px-12 md:py-5 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        >
+          Download
+        </button>
+        <button id="hamburger" class="block md:hidden ml-2 ">
+            <svg class="w-8 h-8 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+            </svg>
+          </button>
+      
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="toggle__hamburger md:hidden fixed  top-0 left-0 right-0 bg-white w-full h-full flex flex-col justify-center items-center shadow-lg z-10">
+            <span id="close-ham" class="absolute top-20 right-10 text-3xl">X</span>
+          <ul class="header__nav-list flex flex-col gap-4 text-lg font-bold p-4">
+            <li class="header__nav-item header__nav-item--active text-red-600">Home</li>
+            <li class="header__nav-item">About Us</li>
+            <li class="header__nav-item">Pricing</li>
+            <li class="header__nav-item">Features</li>
+          </ul>
+        </div>
+      </header>
+      
+      <div id="home" class="hero-section mt-[115px] flex flex-col md:flex-row">
+        <div class="left-section relative md:w-1/2 px-4 md:px-10">
+          <img
+            class="absolute top-10 -z-[1] hidden md:block"
+            src="assets/glowGradient.svg"
+            alt="glowGradient"
+          />
+          <p class="text-4xl md:text-5xl font-bold mt-4 md:mt-0">Make the Best</p>
+          <p class="text-5xl md:text-6xl font-bold mt-2 md:mt-4">Financial Decisions</p>
+          <p class="text-lg md:text-2xl text-gray-400 pt-4 md:pt-[23px]">
+            Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
+            <br class="hidden md:block" /> faucibus tincidunt eu adipiscing sociis arcu lorem porttitor
+          </p>
+          <div class="left-section-getStarted-btn flex flex-col md:flex-row p-[25px]">
+            <button
+              type="button"
+              class="footer__button rounded-md bg-black px-8 md:px-10 py-3 md:py-5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black mb-4 md:mb-0 md:mr-4"
+            >
+              Get Started
+            </button>
+            <button
+              type="button"
+              class="footer__button flex items-center justify-center rounded-md px-8 md:px-10 py-3 md:py-5 text-sm font-semibold shadow-sm hover:bg-black/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              <img src="./assets/play.png" alt="" class="mr-2" />
+              Watch
+            </button>
+          </div>
+          <div class="finance-strip p-[16.75px] mt-4 md:mt-8">
+            <img src="./assets/finance-strip.png" alt="finance strip logo" />
+          </div>
+        </div>
+        <div class="hero-right-section relative md:w-1/2 mt-8 md:mt-0 px-4 md:px-10  hidden md:block">
+          <img
+            class="absolute bottom-10 -z-[1] hidden md:block"
+            src="assets/glowGradient.svg"
+            alt="glowGradient"
+          />
+          <div class="right relative flex items-center justify-center">
+            <img
+              src="./assets/hero-phone-3.svg"
+              class="  relative z-[2]"
+              alt=""
+            />
+            <img
+              src="./assets/hero-phone-2.svg"
+              class="  absolute top-[10%] left-[20%] z-[1]"
+              alt=""
+            />
+            <img
+              src="./assets/hero-phone-1.svg"
+              class=" w-[80%] absolute top-[20%] left-[40%] z-0"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      
+
+      <div id="features" class="features flex flex-col md:flex-row justify-between items-center gap-4 relative px-4 md:px-10">
+        <div class="feature-img mt-[109px] md:mt-0 md:w-1/2 flex justify-center md:justify-start">
+          <img
+            class="absolute top-10 -z-[1] hidden md:block"
+            src="assets/glowGradient.svg"
+            alt="glowGradient"
+          />
+          <img src="./assets/phone-with-ellipse.png" alt="" class="w-full md:w-auto max-w-md" />
+        </div>
+        <div class="feature-text md:pl-[46px] mt-10 md:mt-0 md:w-1/2">
+          <p class="text-3xl text-red-400 font-semibold">FEATURES</p>
+          <p class="text-4xl md:text-5xl font-bold pt-2 md:pt-[4px]">Uifry Premium</p>
+          <div>
+            <div class="budget-interval flex pt-[32px]">
+              <img src="./assets/star-Icon.png" alt="" class="w-8 h-8 md:w-auto md:h-auto" />
+              <p class="text-lg md:text-xl font-semibold pl-4">Budgeting Interval</p>
+            </div>
+            <p class="text-gray-400 pt-4 md:pt-[15px] text-sm md:text-base">
+              Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
+              faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.
+            </p>
+            <div class="budget-interval flex pt-[32px]">
+              <img src="./assets/cube-02.png" alt="" class="w-8 h-8 md:w-auto md:h-auto" />
+              <p class="text-lg md:text-xl font-semibold pl-4">Budgeting Interval</p>
+            </div>
+            <p class="text-gray-400 pt-4 md:pt-[15px] text-sm md:text-base">
+              Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
+              faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.
+            </p>
+          </div>
+          <div class="budget-interval flex pt-[32px]">
+            <img src="./assets/cuboid-icon.png" alt="" class="w-8 h-8 md:w-auto md:h-auto" />
+            <p class="text-lg md:text-xl font-semibold pl-4">Budgeting Interval</p>
+          </div>
+          <p class="text-gray-400 pt-4 md:pt-[15px] text-sm md:text-base">
+            Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
+            faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.
+          </p>
+        </div>
+      </div>
+      
+      <div id="about-us" class="advantages pt-[118px] flex flex-col md:flex-row justify-around items-center relative px-4 md:px-10">
+        <div class="advantage-text md:pl-[46px] mb-10 md:mb-0 md:w-1/2">
+          <p class="text-3xl text-red-400 font-semibold">Advantage</p>
+          <p class="text-4xl md:text-5xl font-bold pt-2 md:pt-[4px]">Why Choose Uifry?</p>
+          <div class="clever-notification flex pt-[32px]">
+            <img src="./assets/bell-icon.png" alt="" class="w-8 h-8 md:w-auto md:h-auto" />
+            <p class="text-lg md:text-3xl font-semibold pl-4">Clever Notifications</p>
+          </div>
+          <p class="text-gray-400 pt-4 md:pt-[15px] text-sm md:text-xl">
+            Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies.
+            In ultrices malesuada elit mauris etiam odio. Duis tristique lacus, et
+            blandit viverra nisl velit. Sed mattis rhoncus, diam suspendisse sit
+            nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien,
+            suspendisse aliquam.
+          </p>
+        </div>
+        <div class="relative md:w-1/2 flex justify-center md:justify-end">
+          <img src="./assets/phone-with-ellipse-2.png" alt="" class="w-full md:w-auto max-w-md" />
+          <img
+            class="absolute bottom-10 right-[15%] -z-[1] hidden md:block"
+            src="assets/glowGradient.svg"
+            alt="glowGradient"
+          />
+        </div>
+      </div>
+      <div id="pricing" class="customizable flex flex-col md:flex-row justify-between items-center relative mt-10 px-4 md:px-10">
+        <div class="relative md:w-1/2 flex justify-center md:justify-start mb-10 md:mb-0">
+          <img src="./assets/phone-with-ellipse-3.png" alt="" class="w-full md:w-auto max-w-md" />
+          <img
+            class="absolute bottom-10 -z-[1] hidden md:block"
+            src="assets/glowGradient.svg"
+            alt="glowGradient"
+          />
+        </div>
+        <div class="md:w-1/2 md:pl-[46px]">
+          <div class="customizable-text flex pt-[32px]">
+            <img src="./assets/star-Icon.png" alt="" class="w-8 h-8 md:w-auto md:h-auto" />
+            <p class="text-lg md:text-3xl font-semibold pl-4">Fully Customizable</p>
+          </div>
+          <p class="text-gray-400 pt-4 md:pt-[15px] text-sm md:text-xl">
+            Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies.
+            In ultrices malesuada elit mauris etiam odio. Duis tristique lacus, et
+            blandit viverra nisl velit. Sed mattis rhoncus, diam suspendisse sit
+            nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien,
+            suspendisse aliquam.
+          </p>
+        </div>
+      </div>
+      
+      
+
+      <div class="testimonial relative px-4 md:px-10 py-10">
+        <p class="text-center text-3xl">Testimonial</p>
+        <p class="text-4xl md:text-5xl font-bold pt-[4px] text-center">What Our Users</p>
+        <p class="text-4xl md:text-5xl font-bold text-center">Say About Us?</p>
+      
+        <div class="testimonial-content flex flex-col md:flex-row justify-between items-center mt-10 md:mt-16">
+          <img
+            class="absolute -z-[1] hidden md:block"
+            src="assets/glowGradient.svg"
+            alt="glowGradient"
+          />
+          <img src="./assets/Testimonial.png" alt="" class="w-full md:w-auto max-w-md mb-8 md:mb-0 md:mr-8" />
+          <div class="testimonial-text md:w-1/2">
+            <p class="text-2xl md:text-3xl font-semibold">The Best Financial Accounting App Ever!</p>
+            <p class="text-gray-400 pt-4 md:pt-[15px] text-sm md:text-xl">
+              Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies.
+              In ultrices malesuada elit mauris etiam odio. Duis tristique lacus,
+              et blandit viverra nisl velit. Sed mattis rhoncus, diam suspendisse
+              sit nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien,
+              suspendisse aliquam.
+            </p>
+            <div class="testimonial-user flex items-center pt-6 md:pt-[24px]">
+              <img src="./assets/Testimonial-user.png" alt="" class=" md:w-auto md:h-auto" />
+              
+              <p class="font-bold ml-4">Nick Jonas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="FAQ px-4 md:px-10 py-10">
+        <p class="text-red-600 text-2xl">FAQ</p>
+        <p class="text-4xl md:text-5xl font-bold pt-[4px]">
+          Frequently Asked <br />
+          Questions
+        </p>
+      
+        <div class="FAQ-section-1 flex flex-col md:flex-row justify-between items-start md:items-center pt-[40px]">
+          <div class="text-white bg-[#ff5555] p-6 md:p-[20px] mb-8 md:mb-0 mx-0 md:mx-[20px] rounded-md">
+            <p class="text-2xl md:text-3xl font-bold">
+              The Best Financial Accounting App Ever!
+            </p>
+            <p class="pt-4 md:pt-[15px] text-base md:text-xl">
+              “Arcu at dictum sapien, mollis. Vulputate sit id accumsan,
+              ultricies. In ultrices malesuada elit mauris.
+            </p>
+          </div>
+          <div class="p-6 md:mx-[20px]">
+            <p class="text-2xl md:text-3xl font-bold">
+              The Best Financial Accounting App Ever!
+            </p>
+            <p class="text-gray-400 pt-4 md:pt-[15px] text-base md:text-xl">
+              “Arcu at dictum sapien, mollis. Vulputate sit id accumsan,
+              ultricies. In ultrices malesuada elit mauris.
+            </p>
+          </div>
+        </div>
+      
+        <div class="FAQ-section-2 flex flex-col md:flex-row justify-between items-start md:items-center pt-[40px]">
+          <div class="p-6 md:mx-[20px] mb-8 md:mb-0">
+            <p class="text-2xl md:text-3xl font-bold">
+              The Best Financial Accounting App Ever!
+            </p>
+            <p class="text-gray-400 pt-4 md:pt-[15px] text-base md:text-xl">
+              “Arcu at dictum sapien, mollis. Vulputate sit id accumsan,
+              ultricies. In ultrices malesuada elit mauris.
+            </p>
+          </div>
+          <div class="text-white bg-[#ff5555] p-6 md:p-[20px] rounded-md">
+            <p class="text-2xl md:text-3xl font-bold">
+              The Best Financial Accounting App Ever!
+            </p>
+            <p class="pt-4 md:pt-[15px] text-base md:text-xl">
+              “Arcu at dictum sapien, mollis. Vulputate sit id accumsan,
+              ultricies. In ultrices malesuada elit mauris.
+            </p>
+          </div>
+        </div>
+      
+        <div class="FAQ-section-3 flex flex-col md:flex-row justify-between items-start md:items-center pt-[40px]">
+          <div class="text-white bg-[#ff5555] p-6 md:p-[20px] mb-8 md:mb-0 mx-0 md:mx-[20px] rounded-md">
+            <p class="text-2xl md:text-3xl font-bold">
+              The Best Financial Accounting App Ever!
+            </p>
+            <p class="pt-4 md:pt-[15px] text-base md:text-xl">
+              “Arcu at dictum sapien, mollis. Vulputate sit id accumsan,
+              ultricies. In ultrices malesuada elit mauris.
+            </p>
+          </div>
+          <div class="p-6 md:mx-[20px]">
+            <p class="text-2xl md:text-3xl font-bold">
+              The Best Financial Accounting App Ever!
+            </p>
+            <p class="text-gray-400 pt-4 md:pt-[15px] text-base md:text-xl">
+              “Arcu at dictum sapien, mollis. Vulputate sit id accumsan,
+              ultricies. In ultrices malesuada elit mauris.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    <div class="frame pt-[155px] relative">
+        <img
+        class="absolute -top-10 -left-[20%]  -z-[1]"
+        src="assets/glowGradient.svg"
+        alt="glowGradient"
+      />
+      <img src="./assets/Frame.png" alt="" />
+    </div>
+
+    <footer class="footer flex flex-col f md:flex-row justify-between items-start md:items-start pt-20 md:pt-[155px] px-4 md:px-10">
+        <div class="footer__section footer__section--1 flex flex-col items-start mb-10 md:mb-0">
+          <img
+            src="./assets/Logo.png"
+            alt="logo"
+            class="footer__logo w-32 mb-4"
+          />
+          <div class="footer__helpdesk mb-4">
+            <img
+              src="./assets/help-desk.png"
+              alt="help desk"
+              class="footer__helpdesk-img"
+            />
+          </div>
+          <div class="pt-4">
+            <img src="./assets/phone .png" alt="" />
+          </div>
+        </div>
+        <div class="footer__section footer__section--2 flex flex-col items-start text-lg mb-10 md:mb-0">
+          <p class="footer__title text-2xl md:text-4xl font-semibold">Links</p>
+          <p class="footer__link pt-4">Home</p>
+          <p class="footer__link pt-4">About Us</p>
+          <p class="footer__link pt-4">Bookings</p>
+          <p class="footer__link pt-4">Blog</p>
+        </div>
+        <div class="footer__section footer__section--3 flex flex-col items-start text-lg mb-10 md:mb-0">
+          <p class="footer__title text-2xl md:text-4xl font-semibold">Legal</p>
+          <p class="footer__link pt-4">Term Of Use</p>
+          <p class="footer__link pt-4">Privacy Policy</p>
+          <p class="footer__link pt-4">Cookie Policy</p>
+        </div>
+        <div class="footer__section footer__section--4 flex flex-col items-start text-lg mb-10 md:mb-0">
+          <p class="footer__title text-2xl md:text-4xl font-semibold">Product</p>
+          <p class="footer__link pt-4">Take Tour</p>
+          <p class="footer__link pt-4">Live Chat</p>
+          <p class="footer__link pt-4">Reviews</p>
+        </div>
+        <div class="footer__section footer__section--5 flex flex-col items-start text-lg">
+          <p class="footer__title text-2xl md:text-4xl font-semibold">Newsletter</p>
+          <p class="footer__link pt-4">Stay Up To Date</p>
+          <form class="footer__form flex flex-col md:flex-row items-start pt-4">
+            <input
+              type="email"
+              placeholder="Your email"
+              class="footer__input p-2 md:p-4 mb-4 md:mb-0 md:mr-4"
+            />
+            <button
+              type="button"
+              class="footer__button rounded-md bg-black px-6 py-3 md:px-10 md:py-5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </footer>
+      
+    <script src="./script.js"></script>
+  </body>
+</html>
