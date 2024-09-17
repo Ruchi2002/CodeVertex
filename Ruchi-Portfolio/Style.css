@@ -1,0 +1,416 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Softer dark background */
+    color: #ececec;
+}
+
+header {
+    background-color: black; /* Soft dark pastel blue for header */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #f5f5f5; /* Soft white */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f7a8a8; /* Softer pastel pink on hover */
+}
+
+main {
+    padding: 60px 20px;
+}
+
+section {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+section h1, section h2 {
+    font-size: 2.5rem;
+    color:  purple;/* Softer pastel peach */
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: grey; /* Light pastel gray */
+}
+
+/* Home Section */
+#home {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(135deg, #4A4A4A, #1C1C1E);
+    color: #F8F8FF;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-content {
+    z-index: 1;
+}
+
+.home-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #FAEBD7; /* Antique white */
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #E5E5E5; /* Light grey text */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #1C1C1E;
+    background-color: #FFD700; /* Golden button */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: lightcoral; /* Slightly darker golden */
+    transform: scale(1.05);
+}
+
+
+/* About Section */
+#about {
+    padding: 60px 20px;
+    background-color: #1C1C1E;
+    color: #F8F8FF;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #FAEBD7; /* Antique white */
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    background-color: #3A3A3C; /* Card-like background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+
+.about-content:hover {
+    transform: scale(1.02);
+}
+
+.about-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #E5E5E5; /* Light grey text */
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+/* GSAP Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-container {
+    animation: fadeIn 1s ease-out;
+}
+
+
+/* Projects Section */
+#projects {
+    padding: 60px 20px;
+    background-color: #2C2C2E;
+    color: #F8F8FF;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #FAEBD7; /* Antique white */
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #3A3A3C; /* Card background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 15px;
+}
+
+.project-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #FFD700; /* Golden title */
+}
+
+.project-content p {
+    font-size: 1.2rem;
+    color: #E5E5E5; /* Light grey text */
+}
+
+
+/* Skills Section */
+#skills {
+    padding: 60px 20px;
+    background-color: #1C1C1E;
+    color: #F8F8FF;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #FAEBD7; /* Antique white */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-card {
+    background-color: #2C2C2E; /* Card background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.skill-card:hover {
+    background-color:lightcoral; /* Golden hover */
+    color: black; /* Dark text on hover */
+}
+
+
+.skill-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #FAEBD7; /* Antique white */
+}
+
+.skill-card p {
+    font-size: 1.2rem;
+    color: #E5E5E5; /* Light grey text */
+}
+
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: #2C2C2E;
+    color: #F8F8FF;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #FAEBD7; /* Antique white */
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #3A3A3C; /* Card-like background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info h3, .contact-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #FFD700; /* Golden title */
+}
+
+.contact-info p, .contact-list p {
+    font-size: 1.2rem;
+    color: #E5E5E5; /* Light grey text */
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list i {
+    font-size: 1.5rem;
+    color: #FFD700; /* Golden icons */
+    margin-right: 10px;
+}
+
+.contact-list a {
+    color: #E5E5E5;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    color: #FFD700; /* Golden hover effect */
+}
+
+.contact-form input, .contact-form textarea {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2C2C2E;
+    color: #F8F8FF;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFD700; /* Golden button */
+    color: #2C2C2E; /* Dark text on button */
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #FFC107; /* Slightly darker golden */
+}
+
+
+footer {
+    background-color: #4d4d76; /* Softer dark pastel blue */
+    padding: 20px;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+/* Hover Animations */
+header nav ul li a:hover {
+    color: #f7a8a8; /* Softer pastel pink */
+}
+
+button:hover, a:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+}
